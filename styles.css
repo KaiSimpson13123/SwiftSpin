@@ -7,11 +7,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #423877;
+    background: #363A5D;
+	background-image: radial-gradient(rgb(255, 255, 255) 1px, transparent 0);
+	background-size: 40px 40px;
+	background-position: -19px -19px;
 }
 
 .top-bar {
-    background-color: #363A5D;
+    background-color: #41456b;
     color: #fff;
     padding: 10px 20px; /* Adjust padding to prevent the bar from touching the borders */
     position: fixed;
@@ -20,6 +23,8 @@ body {
     right: 20px;
     border-radius: 30px; /* Round bottom corners */
     z-index: 1000;
+    border: 3px solid black;
+    box-shadow: 0px -1px 43px -12px rgba(0,0,0,0.75);
 }
 
 .container {
@@ -61,4 +66,160 @@ body {
     background-color: #ffffff; /* Change color on hover */
     color: black;
     transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.game-link-1 {
+    height: 300px;
+    width: 200px;
+    background-image: url("MINES.png");
+    left: 20px;
+    top: 150px;
+    position: fixed;
+    border-radius: 30px;
+    box-shadow: 0px -1px 43px -12px rgba(0,0,0,0.75);
+}
+
+.game-link-2 {
+    height: 300px;
+    width: 200px;
+    background-image: url(CRASH.png);
+    left: 250px;
+    top: 150px;
+    position: fixed;
+    border-radius: 30px;
+    box-shadow: 0px -1px 43px -12px rgba(0,0,0,0.75);
+}
+
+.coming-soon {
+    height: 300px;
+    background-image: url("MORE\ GAMES\ COMING\ SOON.png");
+    width: 1030px;
+    left: 480px;
+    top: 150px;
+    position: fixed;
+    border-radius: 30px;
+    box-shadow: 0px -1px 43px -12px rgba(0,0,0,0.75);
+}
+
+#game-container {
+    text-align: center;
+    background-color: #39436B; /* Box background color */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 6px solid black;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 80px); /* Increased size */
+    grid-gap: 10px; /* Increased gap */
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
+    background-color: #1D224C;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px; /* Increased font size */
+    position: relative;
+}
+
+.cell i {
+    font-size: 24px;
+    color: rgb(255, 255, 255); /* Font Awesome icon size */
+}
+
+.cell.revealed {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Scale up */
+    background-color: #39436B;
+    cursor: default;
+}
+
+.cell.mine {
+    background-color: #ff6b6b;
+}
+
+.neon-dollar {
+    font-size: 43px;
+    color: #00e5ff;
+    text-shadow: 
+        0 0 5px #00e5ff,
+        0 0 10px #00e5ff,
+        0 0 20px #00e5ff,
+        0 0 40px #00e5ff,
+        0 0 80px #00e5ff;
+    position: absolute;
+}
+
+#info {
+    margin-bottom: 20px;
+}
+
+#info p {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#info button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#info button:hover {
+    background-color: #ff4c4c;
+}
+
+.logo-mines {
+    position: fixed;
+    width: 20%;
+    height: 15%;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hbtn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #d93434;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+  }
+  
+  .hbtn:hover {
+    background: #fc3c59;
+    text-decoration: none;
+  }
+
+  .top-bar-balance {
+    color: white;
+    font-size: 16px; /* Adjust based on your preference */
+    font-weight: bold;
+}
+
+.top-bar-balance #balance-amount {
+    color: #f0f0f0; /* Optional: for a lighter color */
 }
